@@ -1,4 +1,5 @@
-Einfaches Tic-Tac-Toe Spiel auf Python
+Einfaches Tic-Tac-Toe Spiel auf Python (Unfertig!)
+Bitte Klicken sie auf die Datei 'Python Tic-Tac-Toe (unfertig).txt'
 
 Spielfeld: Ein 3x3-Spielfeld wird im Terminal angezeigt.
 
