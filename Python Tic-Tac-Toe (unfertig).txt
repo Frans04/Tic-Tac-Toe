@@ -1,0 +1,67 @@
+Zwei Spieler namens 'X' und 'O', machen abwechselnd ihre Züge auf einem 3 mal 3 Spielfeld, bis einer der Spieler gewinnt oder es ein Unentschieden gibt. Spieler 'X' beginnt. Dieser muss die Position '1'-'9' eingeben. Positionen sind unten gelistet.
+ 1 | 2 | 3
+---+---+---
+ 4 | 5 | 6
+---+---+---
+ 7 | 8 | 9
+Anschließend ist der zweite Spieler 'O' dran.
+Da Programm muss vor jeder Eingabe prüfen, ob das gewünschte Feld (also Position 1-9) schon belegt ist. Wenn das zutrifft, ist der Zug ungültig und muss erneut eingegeben werden. Gewonnen wird, wenn drei Symbole in einer Reihe, Spalte oder Diagonale entstehen. Wenn nach 9 Zügen kein Spieler gewonnen hat, entsteht ein Unentschieden.
+------------------------------------------------------------------------------------------------------------------------------------------
+# Ein ganz einfaches Tic-Tac-Toe Spiel
+
+# Die Spielfeldabgrenzung
+board = [" " for _ in range(9)]
+
+# Das Spielfeld drucken
+def print_board():
+    print(board[0] + " | " + board[1] + " | " + board[2])
+    print("--+---+--")
+    print(board[3] + " | " + board[4] + " | " + board[5])
+    print("--+---+--")
+    print(board[6] + " | " + board[7] + " | " + board[8])
+
+# Überprüfen, ob jemand gewonnen hat
+def check_winner(player):
+    if (board[0] == board[1] == board[2] == player or
+        board[3] == board[4] == board[5] == player or
+        board[6] == board[7] == board[8] == player or
+        board[0] == board[3] == board[6] == player or
+        board[1] == board[4] == board[7] == player or
+        board[2] == board[5] == board[8] == player or
+        board[0] == board[4] == board[8] == player or
+        board[2] == board[4] == board[6] == player):
+        return True
+    return False
+
+#'Das Spiel an sich'
+def main():
+    current_player = "X"
+    for i in range(9):
+        print_board()
+        print("Spieler " + current_player + " ist dran.")
+        move = input("Bitte geben Sie Ihre Position (1-9) ein: ")
+        move = int(move) - 1
+        
+        if board[move] != " ":
+            print("Ungültiger Zug. Versuchen Sie es erneut.")
+            continue
+        
+        board[move] = current_player
+        
+        if check_winner(current_player):
+            print_board()
+            print("Spieler " + current_player + " hat gewonnen!")
+            return
+        
+        if current_player == "X":
+            current_player = "O"
+        else:
+            current_player = "X"
+    
+    print_board()
+    print("Unentschieden!")
+
+# Das Spiel starten
+main()
+---------------------------------------------------------------------------------------------------------------------------------------
+# 'Spiel' noch in Bearbeitung, Wissen aus Schule, Foren und Online Tutorials.
