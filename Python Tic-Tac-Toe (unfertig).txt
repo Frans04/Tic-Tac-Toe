@@ -6,7 +6,7 @@ Zwei Spieler namens 'X' und 'O', machen abwechselnd ihre Züge auf einem 3 mal 3
  7 | 8 | 9
 Anschließend ist der zweite Spieler 'O' dran.
 Da Programm muss vor jeder Eingabe prüfen, ob das gewünschte Feld (also Position 1-9) schon belegt ist. Wenn das zutrifft, ist der Zug ungültig und muss erneut eingegeben werden. Gewonnen wird, wenn drei Symbole in einer Reihe, Spalte oder Diagonale entstehen. Wenn nach 9 Zügen kein Spieler gewonnen hat, entsteht ein Unentschieden.
-------------------------------------------------------------------------------------------------------------------------------------------
+####################################################################################################################################################################
 # Ein ganz einfaches Tic-Tac-Toe Spiel
 
 # Die Spielfeldabgrenzung
@@ -63,5 +63,5 @@ def main():
 
 # Das Spiel starten
 main()
----------------------------------------------------------------------------------------------------------------------------------------
+###################################################################################################################################################################
 # 'Spiel' noch in Bearbeitung, Wissen aus Schule, Foren und Online Tutorials.
