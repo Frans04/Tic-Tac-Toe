@@ -63,5 +63,8 @@ def main():
 
 # Das Spiel starten
 main()
-###################################################################################################################################################################
+################################################################################################################################################################
+# besseres Spielerwechsel: current_player = "O" if current_player == "X" else "X"
+# neue Spielfeldabgrenzung #(damit eingaben des Spielers und die des Boards übereinstimmen) #board = [str(i + 1) for i in range(9)]
+
 # 'Spiel' noch in Bearbeitung, Wissen aus Schule, Foren und Online Tutorials.
